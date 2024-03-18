@@ -5,27 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
 <div class="content">
     <div class="content-left">
         <header>
             <button class="btn">Search for places</button>
-            <button class="icon-btn">G</button>
+            <button class="icon-btn"><span class="material-symbols-outlined">
+                share_location
+                </span></button>
         </header>
         <main>
             <div class="icon">
                 <img src="./images/blue-cloud.png">
             </div>
-            <div class="temp">15C</div>
+            <div class="temp"><div id="current-temp">15</div><span>&#176C</span></div>
             <div class="type">Shower</div>
         </main>
         <footer>
-            <div class="date">Today </div>
-            <div class="location">Helsinki</div>
+            <div class="date">Today<span>&#183</span>Fri 5 Jun </div>
+            <div class="location"><span class="material-symbols-outlined">location_on</span>Helsinki</div>
         </footer>
     </div>
-    <div class="content-right"></div>
+    <div class="content-right">
+    <!-- buttons changing temp types-->
+    <div class="temp-types">
+        <button class="icon-btn">&#176 C</button>
+        <button class="icon-btn">&#176 F</button>
+    </div>
+    <!--grid for five days-->
+    <div class="days">
+        <div class="card">
+            <div class="tittle">Tomorrow</div>
+            <div class="icon"><img src="./images/blue-cloud.png"></div>
+            <div class="temp">
+                <div class="max">16<span>&#176C</span></div>
+                <div class="min">11<span>&#176C</span></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="tittle">Tomorrow</div>
+            <div class="icon"><img src="./images/blue-cloud.png"></div>
+            <div class="temp">
+                <div class="max">16<span>&#176C</span></div>
+                <div class="min">11<span>&#176C</span></div>
+            </div>
+        </div>
+          </div>
+          <div class="card">
+            <div class="tittle">Tomorrow</div>
+            <div class="icon"><img src="./images/blue-cloud.png"></div>
+            <div class="temp">
+                <div class="max">16<span>&#176C</span></div>
+                <div class="min">11<span>&#176C</span></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="tittle">Tomorrow</div>
+            <div class="icon"><img src="./images/blue-cloud.png"></div>
+            <div class="temp">
+                <div class="max">16<span>&#176C</span></div>
+                <div class="min">11<span>&#176C</span></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="tittle">Tomorrow</div>
+            <div class="icon"><img src="./images/blue-cloud.png"></div>
+            <div class="temp">
+                <div class="max">16<span>&#176C</span></div>
+                <div class="min">11<span>&#176C</span></div>
+            </div>
+        </div>
+      <!--grid current day-->
+      <div class="aditional-infos">
+
+          <h2>Today's Highlights</h2>
+
+          <div class="aditional-infos-grid">
+
+            <div class="card">
+                  <div class="tittle">Wind status</div>
+                  <div class="value">7<span>mph</span></div>
+                    <div class="extras">
+                    <div class="icon"><span class="material-symbols-outlined">navigation</span></div>
+                  
+                
+                
+                 </div>
+            </div>
+    </div>
+          
+    </div>
+</div>
 </div>
 </body>
 </html>

@@ -2,8 +2,6 @@
 
     display: flex;
     height: 100vh;
-    
-
     &-left{
 
         background-color: $light-blue;
@@ -23,7 +21,19 @@
             z-index: -1;
         }
     }
+
     &-right{
+        display: flex;
+        padding: 50px;
+        margin: 0 auto;
+        max-width: 700px;
+        flex:1;
+        flex-direction: column;
+
+        .temp-types{
+            display: flex;
+            justify-content: flex-end;
+        }
 
     }
 }

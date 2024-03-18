@@ -231,13 +231,6 @@ select {
   text-transform: none;
 }
 
-button,
-html [type=button],
-[type=reset],
-[type=submit] {
-  -webkit-appearance: button;
-}
-
 button::-moz-focus-inner,
 [type=button]::-moz-focus-inner,
 [type=reset]::-moz-focus-inner,
@@ -250,13 +243,6 @@ input[type=radio],
 input[type=checkbox] {
   box-sizing: border-box;
   padding: 0;
-}
-
-input[type=date],
-input[type=time],
-input[type=datetime-local],
-input[type=month] {
-  -webkit-appearance: listbox;
 }
 
 textarea {
@@ -290,11 +276,6 @@ progress {
 [type=number]::-webkit-inner-spin-button,
 [type=number]::-webkit-outer-spin-button {
   height: auto;
-}
-
-[type=search] {
-  outline-offset: -2px;
-  -webkit-appearance: none;
 }
 
 [type=search]::-webkit-search-cancel-button,
@@ -346,6 +327,19 @@ template {
   opacity: 0.05;
   z-index: -1;
 }
+.content-right {
+  display: flex;
+  padding: 50px;
+  margin: 0 auto;
+  max-width: 700px;
+  flex: 1;
+  flex-direction: column;
+}
+.content-right .temp-types {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .content-left {
   padding: 50px;
   min-width: 411px;
@@ -357,6 +351,11 @@ template {
   display: flex;
   justify-content: space-between;
 }
+.content-left header .icon-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .content-left main {
   display: flex;
   justify-content: space-between;
@@ -364,23 +363,45 @@ template {
   align-items: center;
 }
 .content-left main .icon {
-  width: 100%;
-  text-align: center;
+  margin-bottom: 3rem;
 }
 .content-left main .icon img {
   width: 170px;
 }
 .content-left main .temp {
-  width: 100%;
-  text-align: center;
   font-size: 6rem;
+  display: flex;
+  font-weight: 700;
+}
+.content-left main .temp span {
+  font-size: 3rem;
+  font-weight: 400;
+  color: #a09fb1;
 }
 .content-left main .type {
-  width: 100%;
-  text-align: center;
   font-size: 2rem;
   opacity: 0.5;
 }
+.content-left footer {
+  color: #a09fb1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  letter-spacing: 1px;
+}
+.content-left footer .date {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-left footer .location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 button {
   color: #e7e7eb;
   font-weight: 400;
