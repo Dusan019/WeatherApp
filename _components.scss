@@ -1,0 +1,73 @@
+//Components
+.content-left{
+
+    padding: 50px;
+    min-width: 411px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    header{
+        display: flex;
+        justify-content: space-between;
+    
+    }
+
+    main{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        
+        .icon{
+            width: 100%;
+            text-align: center;
+            img{
+                width: 170px;
+            }
+
+        }
+        .temp{
+            
+            width: 100%;
+            text-align: center;
+            font-size: 6rem;
+
+
+        }
+        .type{
+            
+            width: 100%;
+            text-align: center;
+            font-size: 2rem;
+            opacity: 0.5;
+
+        }
+
+    }
+    footer{
+        
+    }
+}
+button{
+
+    color:$text-color;
+    font-weight: 400;
+    border-radius: 0;
+    cursor: pointer;
+    border: none;
+
+    &.btn{
+        padding:5px 15px;
+        background-color: $btn-background;
+    }
+    &.icon-btn{
+        background-color: $btn-background;
+        border-radius: 50px;
+        width: 34px;
+        height: 34px;
+    }
+    &.active{
+        background-color: $text-color;
+        color: $dark-blue;
+    }
+}
