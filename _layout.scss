@@ -23,16 +23,39 @@
     }
 
     &-right{
+
         display: flex;
         padding: 50px;
         margin: 0 auto;
-        max-width: 700px;
+        max-width: 800px;
         flex:1;
         flex-direction: column;
 
         .temp-types{
             display: flex;
             justify-content: flex-end;
+        }
+        .days{
+            display: flex;
+            .card{
+                text-align: center;
+                .temps
+                {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+        .aditional-infos{
+            
+            &-grid{
+                display:grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap:20px;
+                .card{
+                    min-width: calc(50% - 20px);
+                }
+            }
         }
 
     }
