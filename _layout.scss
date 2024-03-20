@@ -40,6 +40,7 @@
         .temp-types{
             display: flex;
             justify-content: flex-end;
+            padding-bottom: 15px;
         }
         .days{
             display: flex;
@@ -59,7 +60,7 @@
             }
         }
         .aditional-infos{
-            
+            padding-top: 15px;
             &-grid{
                 display:grid;
                 grid-template-columns: 1fr 1fr;

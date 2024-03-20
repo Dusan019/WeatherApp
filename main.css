@@ -354,6 +354,7 @@ template {
 .content-right .temp-types {
   display: flex;
   justify-content: flex-end;
+  padding-bottom: 15px;
 }
 .content-right .days {
   display: flex;
@@ -371,6 +372,9 @@ template {
 .content-right .days .card .temps {
   display: flex;
   justify-content: space-between;
+}
+.content-right .aditional-infos {
+  padding-top: 15px;
 }
 .content-right .aditional-infos-grid {
   display: grid;
@@ -451,6 +455,7 @@ template {
   align-items: center;
 }
 .content-left .search-modal {
+  display: none;
   position: absolute;
   width: 100%;
   height: 100%;

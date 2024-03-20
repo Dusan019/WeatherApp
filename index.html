@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
@@ -12,30 +13,30 @@
 <div class="content">
     <div class="content-left">
         <header>
-            <button class="btn">Search for places</button>
-            <button class="icon-btn"><span class="material-symbols-outlined">
+            <button class="btn" id="search_btn">Search for places</button>
+            <button id="gps" class="icon-btn"><span class="material-symbols-outlined">
                 share_location
                 </span></button>
         </header>
         <main>
             <div class="icon">
-                <img src="./images/blue-cloud.png">
+                <img id="current-day" src="./images/blue-cloud.png">
             </div>
             <div class="temp"><div id="current-temp">15</div><span>&#176C</span></div>
-            <div class="type">Shower</div>
+            <div class="type" id="current-type">Shower</div>
         </main>
         <footer>
-            <div class="date">Today<span>&#183</span>Fri 5 Jun </div>
-            <div class="location"><span class="material-symbols-outlined">location_on</span>Helsinki</div>
+            <div class="date"> </div>
+            <div class="location" id="city-location"><span class="material-symbols-outlined">location_on</span>Helsinki</div>
         </footer>
         <!--search panel-->
-        <section class="search-modal">
+        <section id="search_modal" class="search-modal animate__animated animate__fadeInLeft">
             <div class="close-btn"><span class="material-symbols-outlined">
                 close
                 </span></div>
             <div class="input-group">
                 <label for="">
-                <input type="text" placeholder="search location">
+                <input id="location" type="text" placeholder="search location">
                 <span class="material-symbols-outlined">
                     search
                     </span>
@@ -43,9 +44,7 @@
                 <button id="search">Search</button>
             </div>
             <ul class="city-list">
-                <li>London</li>
-                <li>Barselona</li>
-                <li>London</li>
+                <li><strong>City:<span id="city"></span><br>Region: <span id="region"></span></strong></li>
             </ul>
         </section>
 
