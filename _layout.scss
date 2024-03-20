@@ -2,8 +2,14 @@
 
     display: flex;
     height: 100vh;
+    @include response(sm){
+        flex-direction: column;
+        height: auto;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
     &-left{
-
+        
         background-color: $light-blue;
         position: relative;
         z-index: 1;
@@ -37,6 +43,12 @@
         }
         .days{
             display: flex;
+            
+        @include response(sm){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
             .card{
                 text-align: center;
                 .temps
@@ -54,6 +66,10 @@
                 grid-gap:20px;
                 .card{
                     min-width: calc(50% - 20px);
+                }
+                @include response(sm){
+                    grid-gap: 20px;
+                    grid-template-columns: 1fr;
                 }
             }
         }

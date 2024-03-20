@@ -318,6 +318,14 @@ template {
   display: flex;
   height: 100vh;
 }
+@media screen and (max-width: 600px) {
+  .content {
+    flex-direction: column;
+    height: auto;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
 .content-left {
   background-color: #100e1d;
   position: relative;
@@ -350,6 +358,13 @@ template {
 .content-right .days {
   display: flex;
 }
+@media screen and (max-width: 600px) {
+  .content-right .days {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+}
 .content-right .days .card {
   text-align: center;
 }
@@ -365,6 +380,12 @@ template {
 .content-right .aditional-infos-grid .card {
   min-width: calc(50% - 20px);
 }
+@media screen and (max-width: 600px) {
+  .content-right .aditional-infos-grid {
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+  }
+}
 
 .content-left {
   padding: 50px;
@@ -372,6 +393,7 @@ template {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 .content-left header {
   display: flex;
@@ -428,19 +450,101 @@ template {
   justify-content: center;
   align-items: center;
 }
+.content-left .search-modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding: 50px;
+  background-color: #100e1d;
+}
+@media screen and (max-width: 600px) {
+  .content-left .search-modal {
+    flex-direction: column;
+    height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+.content-left .search-modal .close-btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+}
+.content-left .search-modal ul.city-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.content-left .search-modal ul.city-list li {
+  padding: 15px 15px;
+  margin-bottom: 20px;
+  position: relative;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.content-left .search-modal ul.city-list li:hover {
+  border: 1px solid #616475;
+}
+.content-left .search-modal ul.city-list li:hover:after {
+  content: ">";
+  font-family: "Material icons";
+  -webkit-font-feature-settings: "liga";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-10px, -50%);
+  color: #616475;
+}
+.content-left .search-modal label {
+  position: relative;
+  margin-bottom: 0;
+}
+.content-left .search-modal label input {
+  background: transparent;
+  border: 2px solid #e7e7eb;
+  padding: 10px 15px;
+  color: #e7e7eb;
+  position: relative;
+  padding-left: 40px;
+  width: 100%;
+}
+.content-left .search-modal label span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(10px, -50%);
+  color: #a09fb1;
+}
+.content-left .search-modal .input-group {
+  display: flex;
+  margin: 2rem 0px;
+}
+.content-left .search-modal button {
+  margin-left: 10px;
+  border: none;
+  background: #3c47e9;
+  width: 80px;
+}
 
 .mr-1 {
   margin-right: 1rem;
 }
 
 .content-right .days {
-  margin-top: 2rem;
+  margin-top: 2rem 0px;
 }
 .content-right .days .card {
   background-color: #100e1d;
   padding: 20px;
   margin: 0px 10px;
   min-width: 120px;
+}
+@media screen and (max-width: 600px) {
+  .content-right .days .card {
+    margin: 0;
+  }
 }
 .content-right .days .card:first-child {
   margin-left: 0;

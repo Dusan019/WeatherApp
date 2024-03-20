@@ -6,6 +6,7 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
 <div class="content">
@@ -27,6 +28,29 @@
             <div class="date">Today<span>&#183</span>Fri 5 Jun </div>
             <div class="location"><span class="material-symbols-outlined">location_on</span>Helsinki</div>
         </footer>
+        <!--search panel-->
+        <section class="search-modal">
+            <div class="close-btn"><span class="material-symbols-outlined">
+                close
+                </span></div>
+            <div class="input-group">
+                <label for="">
+                <input type="text" placeholder="search location">
+                <span class="material-symbols-outlined">
+                    search
+                    </span>
+            </label>
+                <button id="search">Search</button>
+            </div>
+            <ul class="city-list">
+                <li>London</li>
+                <li>Barselona</li>
+                <li>London</li>
+            </ul>
+        </section>
+
+
+
     </div>
     <div class="content-right">
     <!-- buttons changing temp types-->
