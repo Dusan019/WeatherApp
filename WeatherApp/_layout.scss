@@ -1,0 +1,79 @@
+.content{
+
+    display: flex;
+    height: 100vh;
+    @include response(sm){
+        flex-direction: column;
+        height: auto;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    &-left{
+        
+        background-color: $light-blue;
+        position: relative;
+        z-index: 1;
+
+        &::after{
+            content: "";
+            background-image: url("./images/background.jpg");
+            background-repeat: no-repeat;
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.05;
+            z-index: -1;
+        }
+    }
+
+    &-right{
+
+        display: flex;
+        padding: 10px 50px 50px 50px;
+        margin: 0 auto 3rem auto;
+        max-width: 800px;
+        flex:1;
+        flex-direction: column;
+
+        .temp-types{
+            display: flex;
+            justify-content: flex-end;
+            padding-bottom: 15px;
+        }
+        .days{
+            display: flex;
+            
+        @include response(sm){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
+            .card{
+                text-align: center;
+                .temps
+                {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+        .aditional-infos{
+            padding-top: 15px;
+            &-grid{
+                display:grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap:20px;
+                .card{
+                    min-width: calc(50% - 20px);
+                }
+                @include response(sm){
+                    grid-gap: 20px;
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+
+    }
+}
